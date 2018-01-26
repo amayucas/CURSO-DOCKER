@@ -1,0 +1,35 @@
+Es una aplicacion para definir y gestionar contenedores
+* Mirar denisroldan en docker
+
+docker-compose.yml
+
+entrypoint: /app/start.sh
+
+docker-compose start
+
+docker-compose up los crea y arranca y vincula contenedores (al terminal)entradas y salidas
+
+docker-compose down ---- detiene y elimina contenedores y redes
+
+--------------------------------------------------------------------------------
+version:	'3'
+
+services:
+	db:
+		image: mysql:5.7
+		enviroment:
+			MYSQL_ROOT_PASSWORD: somewordpress
+			MYSQL_DATABASE: wordpress
+			MYSQL_USER: wordpress
+			MYSQL_PASSWORD: wordpress
+	wordpress:
+		image: wordpress:latest
+		enviroment:
+			WORDPRESS_DB_HOST: db:3306
+			WORDPRESS_DB_USER: wordpress
+			WORDPRESS_DB_PASSWORD: wordpress
+
+-------------------------------------------------------------------------------
+sudo docker-compose -d --- lo crea si estamos en el directorio con el fichero docker-compose.yml
+sudo docker-compose ps --- para ver que tengo
+sudo docker-compose logs -f --- muestra en tiempo real

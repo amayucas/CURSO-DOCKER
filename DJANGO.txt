@@ -1,0 +1,7 @@
+DJANGO GIRLS TUTORIAL
+-------------------------
+sudo pycharm-professional
+python manage.py migrate
+python manage.py runserver
+createsuperuser
+makemigrations

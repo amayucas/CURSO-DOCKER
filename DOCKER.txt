@@ -1,0 +1,46 @@
+docker run hello-world
+docker info
+
+apt-get update
+apt-get upgrade
+
+LISTAR CONTENEDORES
+------------------------------------
+docker ps
+
+INSTALAR NGINX
+--------------------------
+docker run -d -P --name web nginx
+
+SOLO PUERTOS
+-----------------------------
+docker port web
+
+docker inspect web------nos quedamos con el puerto ip
+
+docker pull ubuntu ----- para descargar imagenes
+
+docker images
+
+docker ps ---- ver contenedores funcionando
+
+docker attach----- enlazamos contenedor con la maquina
+
+docker run -i -t ubuntu:latest /bin/bash -------para tener una consola deentro del contenedor
+
+BINDING (PARA ESPECIFICAR QUE MAQUINA PUEDE ACCEDER A UN CONTENEDOR)
+----------------------------------------------------------------------------------------------
+-p 127.0.0.1::6379
+
+BORRAR CONTENEDORES
+-----------------------------------------
+docker rm o rmi si es una imagen
+
+MOSTRAR COTNENEDORES
+---------------------------------
+docker -a
+
+DOCKERFILE (CONFIGURACION) quien es el que gestiona la imagen,quien la usa y que quiere hacer
+.-------------------------------------
+
+
